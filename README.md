@@ -39,4 +39,4 @@ The project represents an alpha version of a spaceship.
 
 ## Modification
 
-Something new...
+This is the changed line.
