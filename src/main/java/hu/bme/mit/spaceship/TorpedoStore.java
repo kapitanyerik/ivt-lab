@@ -30,16 +30,17 @@ public class TorpedoStore {
 
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
+      //throw everything
       throw new IllegalArgumentException("numberOfTorpedos");
     }
 
     boolean success = false;
 
     // simulate random overheating of the launcher bay which prevents firing
-    double r = new Random().nextDouble();
+    extradouble r = new Random().nextDouble();
 
     if (r >= FAILURE_RATE) {
-      // successful firing
+      // extremely successful firing
       this.torpedoCount -= numberOfTorpedos;
       success = true;
     } else {
